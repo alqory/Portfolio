@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+.con-nav{
+    /* border: 1px solid; */
+    position: fixed;
+    top: 35%;
+}
+.navbar > * {
+    margin-left: 20px;
+    padding: 10px;
+    font-size: large;
+    color: black;
+}
+.navbar{
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    /* border: 1px solid; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+}
+.hero {
+    border: 1px solid;
+    padding: 100px;
+    text-align: center;
+}
+.hero > * {
+    margin: 10px;
+}
+.hero p {
+    color: grey;
+}
+.hero img {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 20px;
+}
+.hero h1 {
+    color: rgb(27, 27, 207);
+}
+.about {
+    margin-top: 20px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 'kiri kiri kiri kanan'
+                          'kiri kiri kiri kanan'
+    ;
+    padding: 10px;
+    }
+.kiri {
+    grid-area: kiri ;
+    background-color: rgb(101, 101, 236);
+    border-radius: 10px;
+    
+}
+.kanan {
+    grid-area:kanan;
+    position: relative;
+}
+.kanan img {
+    height: 450px;
+    border-radius: 10px;
+}
+.skill {
+    margin-top: 100px;
+    padding: 50px;
+}
+.atas {
+    margin-left: 20px;
+    text-align: center;
+}
+
+.atas h2,.bawah h2 {
+    margin-bottom: 30px;
+}
+.logo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+}
+.atas #sc {
+    height: 120px;
+    width: 100px;
+}
+ #ss {
+    height: 100px;
+    width: 100px;
+ }
+ #tcc {
+     height: 30px;
+     width: 200px;
+ }
+
+ @media (max-width: 500px) {
+    .container {
+        margin-top: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .con-nav {
+        top: 0;
+        left: 20%;
+        z-index: 1000;
+    }
+    .navbar{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .about{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'kiri'
+        'kanan'
+        ;   
+        justify-items: center;  
+    }
+    .kiri{
+        padding: 10px;
+        text-align: center;
+    }
+ }
