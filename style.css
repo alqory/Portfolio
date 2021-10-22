@@ -126,22 +126,48 @@
      margin-bottom: 50px;
  }
  .project {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
-     justify-items: center;
-     align-items: center;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     gap: 10px;
  }
  .card {
-     padding: 10px;
-     background-color: rgb(36, 4, 36);
+     display: flex;
+     flex-direction: row;
      margin-bottom: 20px;
-     color: white;
-     border-radius: 10px;
+     border-radius: 23px 23px 8px 8px;
+     padding: 0 0px 0 px;
+     position: relative;
+     top: 0;
+     transition:  ease 0.5s;
  }
  .card img {
-     width: 100%;
+     /* height: 100px; */
  }
-
+ .card:hover {
+    top: -10px;
+    background-color: rgb(31, 8, 49);
+ }
+ .card .bot {
+     padding: 10px;
+     /* background-color: turquoise; */
+     border-radius: 8px;
+ }
+ .bot p {
+     display: none;
+ }
+ @media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+ }
  @media (max-width: 500px) {
     .container {
         margin-top: 50px;
@@ -168,5 +194,15 @@
     .kiri{
         padding: 10px;
         text-align: center;
+    }
+    .project {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
  }

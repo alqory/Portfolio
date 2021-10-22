@@ -68,40 +68,43 @@
         <div class="karya">
             <h2>Project</h2>
             <div class="project">
-            
-                <div class="card">
-                    <img src="img/dj.png" alt="" width="220px">
-                    <h2>E libary</h2>
-                    <p>Aplikasi Perpustakaan <br> <a href="">Demo Aplikasi</a></p>
+                <div class="card" >
+                    <img src="img/dj.png" alt="" width="200px">
+                    <div class="bot">
+                        <h3>E - Perpustakaan</h3>
+                        <p class="p">Aplikasi Perpustakaan berbasis Web yang mampu mencatat semua kegiatan pada sistem Perpustakaan seperi Pinjam dan pemulangan buku serta ada sistem denda apabila lewat dari waktu yang sudah di tetapkan </p>
+                        <a href="https://github.com/alqory">Demo Aplikasi</a>
+                    </div>
                 </div>
+
                 <div class="card">
                     <img src="img/dj.png" alt="" width="200px">
-                    <h2>E libary</h2>
-                    <p></p>
-                </div>
-                <div class="card">
-                    <img src="img/dj.png" alt="" width="200px">
-                    <h2>E libary</h2>
-                    <p></p>
-                </div>
-                <div class="card">
-                    <img src="img/dj.png" alt="" width="200px">
-                    <h2>E libary</h2>
-                    <p></p>
-                </div>
-                <div class="card">
-                    <img src="img/dj.png" alt="" width="200px">
-                    <h2>E libary</h2>
-                    <p></p>
-                </div>
-                <div class="card">
-                    <img src="img/dj.png" alt="" width="200px">
-                    <h2>E libary</h2>
-                    <p></p>
+                    <div class="bot">
+                        <h3>E - Perpustakaan</h3>
+                        <p class="p">Aplikasi Perpustakaan berbasis Web yang mampu mencatat semua kegiatan pada sistem Perpustakaan seperi Pinjam dan pemulangan buku serta ada sistem denda apabila lewat dari waktu yang sudah di tetapkan </p>
+                        <a href="">Demo Aplikasi</a>
+                    </div>
                 </div>
             </div>
         </div>
         
     </div>
+    <script>
+        const card = document.getElementsByClassName('card');
+        for (let i = 0; i < card.length ; i++) {
+            const p = document.getElementsByClassName('p');
+            for (let y = 0; y < p.length; y++) {
+                card[i].addEventListener('mouseleave', function (event){
+                            p[i].style.display = 'none';       
+                    },true);
+                card[i].addEventListener('mousemove', function(event) {
+                         p[i].style.display = 'block';
+                    },true);
+
+            };
+        };
+        
+
+    </script>
 </body>
 </html>
