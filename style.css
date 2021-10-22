@@ -26,11 +26,11 @@
     margin-left: 100px;
     margin-right: 100px;
     /* border: 1px solid; */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: linear-gradient(#1a022b, #880581);
+    box-shadow: #370955 0px 5px 15px;
     position: relative;
 }
 .hero {
-    border: 1px solid;
     padding: 100px;
     text-align: center;
 }
@@ -46,7 +46,7 @@
     border-radius: 20px;
 }
 .hero h1 {
-    color: rgb(27, 27, 207);
+    color: white;
 }
 .about {
     margin-top: 20px;
@@ -60,7 +60,7 @@
     }
 .kiri {
     grid-area: kiri ;
-    background-color: rgb(101, 101, 236);
+    background-color: white;
     border-radius: 10px;
     
 }
@@ -75,14 +75,16 @@
 .skill {
     margin-top: 100px;
     padding: 50px;
+    position: relative;
+    overflow: hidden;
 }
 .atas {
     margin-left: 20px;
     text-align: center;
 }
 
-.atas h2,.bawah h2 {
-    margin-bottom: 30px;
+.atas h2 {
+    margin-bottom: 50px;
 }
 .logo {
     display: grid;
@@ -90,6 +92,17 @@
     justify-items: center;
     align-items: center;
     gap: 20px;
+    /* animation:logo infinite 10s ;
+    animation-timing-function: cubic-bezier(10, 77, 77, 3); */
+}
+@keyframes logo {
+    from{
+        transform: translateX(-1100px);
+        transition: 2s;
+    }
+    to{
+        transform: translateX(1100px);
+    }
 }
 .atas #sc {
     height: 120px;
@@ -102,6 +115,31 @@
  #tcc {
      height: 30px;
      width: 200px;
+ }
+ .karya {
+    margin-top: 100px;
+     text-align: center;
+     padding: 10px;
+ }
+ .karya h2 {
+     padding: 10px;
+     margin-bottom: 50px;
+ }
+ .project {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+     justify-items: center;
+     align-items: center;
+ }
+ .card {
+     padding: 10px;
+     background-color: rgb(36, 4, 36);
+     margin-bottom: 20px;
+     color: white;
+     border-radius: 10px;
+ }
+ .card img {
+     width: 100%;
  }
 
  @media (max-width: 500px) {
